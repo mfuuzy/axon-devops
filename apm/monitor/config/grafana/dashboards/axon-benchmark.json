@@ -735,7 +735,7 @@
           "targets": [
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_time_cost_seconds_bucket{type=\"exec\"}[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_time_cost_seconds_bucket{type=\"exec\"}[5m])) by (le, node)))",
               "hide": false,
               "interval": "",
               "legendFormat": "exec_90",
@@ -743,7 +743,7 @@
             },
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_time_cost_seconds_bucket{type=\"exec\"}[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_time_cost_seconds_bucket{type=\"exec\"}[5m])) by (le, node)))",
               "hide": true,
               "interval": "",
               "legendFormat": "p2",
@@ -1052,7 +1052,7 @@
           "targets": [
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_duration_seconds_bucket[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_duration_seconds_bucket[5m])) by (le, node)))",
               "hide": false,
               "interval": "",
               "legendFormat": "time_usage(s)",
@@ -1060,7 +1060,7 @@
             },
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_duration_seconds_bucket[5m])) by (le, instance))) / avg(histogram_quantile(0.90, sum(rate(axon_consensus_time_cost_seconds_bucket{type=\"exec\"}[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_duration_seconds_bucket[5m])) by (le, node))) / avg(histogram_quantile(0.90, sum(rate(axon_consensus_time_cost_seconds_bucket{type=\"exec\"}[5m])) by (le, node)))",
               "hide": true,
               "interval": "",
               "legendFormat": "p1",
@@ -1455,7 +1455,7 @@
           "targets": [
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_check_block_bucket{type=\"check_block_cost\"}[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_check_block_bucket{type=\"check_block_cost\"}[5m])) by (le, node)))",
               "hide": false,
               "interval": "",
               "legendFormat": "check_block_cost",
@@ -1463,7 +1463,7 @@
             },
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_check_block_bucket{type=\"get_txs_cost\"}[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_check_block_bucket{type=\"get_txs_cost\"}[5m])) by (le, node)))",
               "hide": true,
               "interval": "",
               "legendFormat": "get_txs_cost",
@@ -1471,7 +1471,7 @@
             },
             {
               "exemplar": true,
-              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_check_block_bucket{type=\"write_wal_cost\"}[5m])) by (le, instance)))",
+              "expr": "avg(histogram_quantile(0.90, sum(rate(axon_consensus_check_block_bucket{type=\"write_wal_cost\"}[5m])) by (le, node)))",
               "hide": false,
               "interval": "",
               "legendFormat": "write_wal_cost",
